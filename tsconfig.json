@@ -1,28 +1,71 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "target": "es5",
+    "outDir": "out",
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
+    "noEmit": true,
+    "isolatedModules": true,
     "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@Atoms/*": ["src/Components/Atoms/*"],
+      "@Atoms": ["src/Components/Atoms"],
+      "@Molecules/*": ["src/Components/Molecules/*"],
+      "@Molecules": ["src/Components/Molecules"],
+      "@Organisms/*": ["src/Components/Organisms/*"],
+      "@Organisms": ["src/Components/Organisms"],
+      "@Definitions/*": ["src/Definitions/*"],
+      "@Definitions": ["src/Definitions"],
+      "@Interfaces": ["src/Interfaces"],
+      "@Interfaces/*": ["src/Interfaces/*"],
+      "@Pages/*": ["pages/*"],
+      "@Redux": ["src/Redux"],
+      "@Redux/*": ["src/Redux/*"],
+      "@ReduxModules": ["src/Redux/Modules"],
+      "@ReduxModules/*": ["src/Redux/Modules/*"],
+      "@Static/*": ["public/static/*"],
+      "@Test/*": ["test/*"],
+      "@src": ["./src"],
+      "@src/*": ["./src/*"],
+      "@Fonts": ["src/Fonts"],
+      "@Fonts/*": ["src/Fonts/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "C:\\Users\\lcu\\Desktop\\terrapages\\ZestmoConsoleNextjs\\.next/types/**/*.ts"
+  ]
 }
